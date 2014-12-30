@@ -19,11 +19,9 @@ description: Android技术分享者，开源爱好者
 
 ###我的新浪博客:十年磨一贱_llH
 
-###![12101](http://jason-hua.github.com/image/class.jpg)
-
 ### 我的微信公众号:小闲 (专注Android)
 
-<img src="http://jason-hua.github.com/image/weixinpublic.png" />
+
 
 
 
