@@ -1,10 +1,12 @@
-﻿---
+---
 layout: post
-title: stormzhang博客精华
-keywords: stormzhang, android, android studio
+title: stormhua博客
+keywords: stormhua, android, android studio
 description: Android技术分享者，开源爱好者
 ---
 {% include codepiano/setup %}
+
+## 置顶
 
 ###EOE里的博客
 [多点触摸和图形的移动](http://www.eoeandroid.com/thread-550007-1-1.html)
@@ -16,13 +18,6 @@ description: Android技术分享者，开源爱好者
 [自定义的tabhost（类似ios的SegmentControl](http://www.eoeandroid.com/thread-549463-1-1.html)
 
 [viewflipper控件，实现左右滑动（动画效果自定义](http://www.eoeandroid.com/thread-549434-1-1.html)
-
-
-
-
-
-
-
 
 
 
