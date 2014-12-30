@@ -6,8 +6,6 @@ description: Android技术分享者，开源爱好者
 ---
 {% include codepiano/setup %}
 
-## 置顶
-
 ###EOE里的博客
 [多点触摸和图形的移动](http://www.eoeandroid.com/thread-550007-1-1.html)
 
@@ -19,6 +17,11 @@ description: Android技术分享者，开源爱好者
 
 [viewflipper控件，实现左右滑动（动画效果自定义](http://www.eoeandroid.com/thread-549434-1-1.html)
 
+>我就问你我是天才吗？
+>>我就问你我是天才吗？
+>>>我就问你我是天才吗？
+>>>>我就问你我是天才吗？
+>>>>>我就问你我是天才吗？
 
 
 
