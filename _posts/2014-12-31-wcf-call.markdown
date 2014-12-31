@@ -1,0 +1,113 @@
+---
+layout: post
+keywords: blog
+description: blog
+title: "Android调用wcf"
+categories: [API]
+tags: [wcf]
+---
+{% include codepiano/setup %}
+
+###wcf介绍
+
+
+> *Windows Communication Foundation(WCF)是由微软开发的一系列支持数据通信的应用程序框架，可以翻译为Windows 通讯开发平台。整合了原有的windows通讯的 .net Remoting，WebService，Socket的机制，并融合有Http和Ftp的相关技术。是Windows平台上开发分布式应用最佳的实践方式。*
+
+
+{% highlight ruby %}
+
+	public class WebServiceUtils {
+		private static SoapObject soapObject;
+	
+		/**
+		 * 这是一个构造函数，初始化soapObject.
+		 * 
+		 * @param methodName
+		 *            方法名
+		 */
+		public WebServiceUtils(String methodName) {
+			// TODO Auto-generated constructor stub
+			soapObject = new SoapObject(ConstantUtils.NAMESPACE, methodName);
+		}
+	
+		private static final ExecutorService executorService = Executors
+				.newFixedThreadPool(3);
+	
+		/**
+		 * 
+		 * @param URL
+		 *            WebService服务器地址
+		 * @param soapAction
+		 * 
+		 * @param methodName
+		 *            方法名
+		 * @param webServiceCallBack
+		 *            回调接口
+		 */
+		public static void callWebService(final String URL,
+				final String soapAction, final String methodName,
+				final WebServiceCallBack webServiceCallBack) {
+	
+			// 创建HttpTransportSE对象，传递webservice的地址和连接超时时间。
+			final HttpTransportSE httpTransportSE = new HttpTransportSE(URL,
+					ConstantUtils.TIMEOUT);
+			// 实例化SoapSerializationEnvelope，传入WebService的SOAP协议的版本号
+			final SoapSerializationEnvelope soapEnvelope = new SoapSerializationEnvelope(
+					SoapEnvelope.VER11);
+			soapEnvelope.setOutputSoapObject(soapObject);
+			// 设置与.Net提供的Web Service保持较好的兼容性
+			soapEnvelope.dotNet = true;
+			// 使用调试功能
+			httpTransportSE.debug = true;
+			// 用于子线程和主线程通信的handle
+			final Handler mHandler = new Handler() {
+	
+				@Override
+				public void handleMessage(Message msg) {
+					super.handleMessage(msg);
+					// 将返回值回调到callback的参数中
+					webServiceCallBack.callBack((SoapObject) msg.obj);
+					
+				}
+			};
+			// 开启线程去访问Wcf
+			executorService.submit(new Runnable() {
+				@Override
+				public void run() {
+					SoapObject resultSoapObject = null;
+					try {
+						httpTransportSE.call(soapAction, soapEnvelope);
+						if (soapEnvelope.getResponse() != null) {
+	
+							resultSoapObject = (SoapObject) soapEnvelope.bodyIn;
+						}
+					} catch (HttpResponseException e) {
+						e.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
+					} catch (XmlPullParserException e) {
+						e.printStackTrace();
+					} finally {
+						// 将获取的消息利用Handler发送到主线程
+						mHandler.sendMessage(mHandler.obtainMessage(0,
+								resultSoapObject));
+					}
+				}
+			});
+		}
+	
+		public interface WebServiceCallBack {
+			public void callBack(SoapObject result);
+		}
+	
+		public WebServiceUtils AddProperty(String name, Object value) {
+			soapObject.addProperty(name, value);
+			return this;
+		}
+
+	}
+{% endhighlight %}
+
+$$这是封装好的wcf类$$
+
+**未完待续**

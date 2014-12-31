@@ -33,12 +33,15 @@ tags: [handler]
                 public void getImage(Drawable drawable);
             }
 {% endhighlight %}
+
 $$  接口回调的实现$$
 
 {% highlight ruby %}
-public class MyTask extends AsyncTask<String, Void, List<Map<String, Object>>> {
-protected void onPreExecute() {}
-protected void onPostExecute(List<Map<String, Object>> maps) {}
- protected List<Map<String, Object>> doInBackground(String... params) {}
+
+	public class MyTask extends AsyncTask<String, Void, List<Map<String, Object>>> {
+	protected void onPreExecute() {}
+	protected void onPostExecute(List<Map<String, Object>> maps) {}
+	 protected List<Map<String, Object>> doInBackground(String... params) {}
 {% endhighlight %}
+
 $$异步执行$$
