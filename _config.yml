@@ -77,9 +77,9 @@ codepiano :
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
   #
-  comments :
-    provider : disqus
-    disqus :
+comments :
+    provider : duoshuo
+    duoshuo : 
       short_name : stormhua
    
   # Settings for analytics helper
