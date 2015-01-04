@@ -34,7 +34,7 @@ tags: [关于我]
 	while(study){
 		studying;
 		reading;
-		enjoying
+		enjoying;
 		}
 {% endhighlight %}
 
