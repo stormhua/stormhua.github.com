@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: blog
 title: "Handler+Message+MessageQueue+Looper"
-categories: [Android]
+categories: [android]
 tags: [handler]
 ---
 {% include codepiano/setup %}

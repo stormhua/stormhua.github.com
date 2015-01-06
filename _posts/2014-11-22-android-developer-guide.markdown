@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: blog
 title: "android开发网站导航"
-categories: [Android]
+categories: [android]
 tags: [导航]
 ---
 {% include codepiano/setup %}
