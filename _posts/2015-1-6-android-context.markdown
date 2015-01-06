@@ -17,7 +17,9 @@ tags: [context]
 
 
 &emsp;&emsp;但是在程序的角度Context又是什么呢？在程序的角度，我们可以有比较权威的答案，Context是个抽象类，我们可以直接通过看其类结构来说明答案：
+
 <img src="/image/contextproject.png"/>
+
 可以看到Activity、Service、Application都是Context的子类；
 
 也就是说，Android系统的角度来理解：Context是一个场景，代表与操作系统的交互的一种过程。从程序的角度上来理解：Context是个抽象类，而Activity、Service、Application等都是该类的一个实现。
