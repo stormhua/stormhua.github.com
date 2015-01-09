@@ -15,7 +15,6 @@ tags: [review]
 [cache和内存的映射方式](http://blog.csdn.net/dianhuiren/article/details/6890448)
 
 ### 习题答案 ###
-
 [链接](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/zucheng)
 
 5.11 简述I/O接口的功能和基本组成。  
@@ -39,17 +38,14 @@ tags: [review]
 ### 习题答案 ###
 [链接](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/suanfa)
 
-
 ----------
 
 ## 操作系统 ##
 [老师资料](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/caozuo)
-
 ----------
 
 ## c# ##
-[老师资料ppt](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs//c#)
-
+[老师资料ppt](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/c%23)
 
 ----------
 
