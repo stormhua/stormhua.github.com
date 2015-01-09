@@ -16,10 +16,14 @@ tags: [review]
 
 ### 习题答案 ###
 
-[链接](https://github.com/stormhua/stormhua.github.com/pdfs/zucheng)
+[链接](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/zucheng)
 
 5.11 简述I/O接口的功能和基本组成。  
- ·I/O接口功能  (1)选址功能 (2)传送指令功能 (3)传送数据功能  (4)反映I/O设备工作状态的功能       ·I/O接口基本组成          设备选择电路、命令寄存器和命令译码器、数据缓冲寄存器、设备状态 标记触发器 
+ ·I/O接口功能  
+(1)选址功能 <br>
+(2)传送指令功能 <br>(3)传送数据功能  <br>(4)反映I/O设备工作状态的功能    
+ ·I/O接口基本组成        
+设备选择电路、命令寄存器和命令译码器、数据缓冲寄存器、设备状态 标记触发器 
 
 5.27 DMA方式有何特点？什么样的I/O设备与主机交换信息时采用DMA方式，
 举例说明。 
@@ -33,19 +37,21 @@ tags: [review]
 ## 算法设计 ##
 
 ### 习题答案 ###
-[链接](https://github.com/stormhua/stormhua.github.com/pdfs/suanfa)
+[链接](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/suanfa)
 
 
 ----------
 
 ## 操作系统 ##
-[老师资料](https://github.com/stormhua/stormhua.github.com/pdfs/caozuo)
+[老师资料](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/caozuo)
 
 ----------
 
 ## c# ##
-[老师资料ppt](https://github.com/stormhua/stormhua.github.com/pdfs/c#)
+[老师资料ppt](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs//c#)
 
+
+----------
 
 ## 软件工程 ##
-[一套试卷](https://github.com/stormhua/stormhua.github.com/pdfs/ruanjian)
+[一套试卷](https://github.com/stormhua/stormhua.github.com/tree/master/pdfs/ruanjian)
