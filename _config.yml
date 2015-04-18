@@ -8,7 +8,7 @@ paginate: 5
 title : 谁都不知道明天会发生什么.
 tagline: 爱生活，爱技术，爱科技，爱折腾
 author :
-  name : stormhua
+  name : tomhuahua
   description: Android Developer, Google Fans, Like OpenSource
   email : 
   github : 
@@ -23,7 +23,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://stormhua.github.io
+production_url : http://tomhuahua.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -80,7 +80,7 @@ codepiano :
   comments :
     provider : disqus
     disqus :
-      short_name : stormhua
+      short_name : llh
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
