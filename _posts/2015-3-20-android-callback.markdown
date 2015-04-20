@@ -24,9 +24,12 @@ tags: [回调]
 
 ## 1.异步回调
 
-   //接口的回调方式
+{% highlight java %}
+    //接口的回调方式
     public interface ImageCallBack {
         public void getImage(Drawable drawable);
     }
+}
+{% endhighlight %}
 
 ## 2.同步回调
