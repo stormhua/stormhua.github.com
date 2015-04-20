@@ -55,3 +55,5 @@ pdownLoadImage.loadImage(new DownLoadImage.ImageCallBack() {
 ## 2.同步回调
 
 按钮的setOnClickListener();
+
+[http://blog.csdn.net/xiaanming/article/details/8703708](http://blog.csdn.net/xiaanming/article/details/8703708 "参考")
