@@ -8,21 +8,21 @@ tags: [第一行代码]
 ---
 {% include codepiano/setup %}
 
-## 第一行代码Git使用 ##
+## 第一行代码Git使用 
 
-###  Windows 教程: ###
+##  Windows 教程: 
 
-1. 配置身份 
+* 1.配置身份
 
-		- git config --global user.name "stormhua"
+		-git config --global user.name "stormhua"
 		-git config --global user.email "stormhua@gmail.com"
 
 
-1. 创建代码仓库
+* 2.创建代码库
 
 		-git init	//先进入项目目录下
 
-1. 提交本地代码
+* 3.提交本地代码
 		
 		-git add src
 		-git add .	//添加当前目录的所有文件
@@ -31,13 +31,13 @@ tags: [第一行代码]
 
 ----------
 
-### 忽略文件 ###
+## 忽略文件
 
 &nbsp;&nbsp;Git 提供了一种可配性很强的机制来允许用户将指定的文件或目录排除在版本控制之
 外，它会检查代码仓库的根目录下是否存在一个名为.gitignore 的文件，如果存在的话就去一
 行行读取这个文件中的内容，并把每一行指定的文件或目录排除在版本控制之外。注意.gitignore 中指定的文件或目录是可以使用“*”通配符的。
 
-### 查看修改内容 ###
+## 查看修改内容 
 
 查看文件修改情况的方法非常简单，只需要使用status 命令就可以了，在项目的根目录
 下输入如下命令：
@@ -53,7 +53,7 @@ tags: [第一行代码]
 
 	git diff src/com/example/providertest/MainActivity.java
 
-### 撤销未提交的修改 ###
+## 撤销未提交的修改 
 
 	git checkout src/com/example/providertest/MainActivity.java
 
@@ -64,7 +64,7 @@ tags: [第一行代码]
 然后再运行一遍git status 命令，你就会发现MainActivity.java 这个文件重新变回了未添
 加状态，此时就可以使用checkout 命令来将修改的内容进行撤销了
 
-### 查看提交记录 ###
+## 查看提交记录 
 	git log
 
 当提交记录非常多的时候，如果我们只想查看其中一条记录，可以在命令中指定该记录
@@ -77,13 +77,13 @@ tags: [第一行代码]
 
 ----------
 
-## 分支的用法 ##
+## 分支的用法 
 
-### 查看分支 ###
+## 查看分支 
 
 	git branch –a
 
-### 创建分支 ###
+## 创建分支 
 
 	git branch version1.0
 将修改的代码一行行复制到master 分支上显然不是一种聪明的做法，最好的办法就是使用merge
@@ -92,16 +92,17 @@ tags: [第一行代码]
 	git checkout master
 	git merge version1.0
 
-### 删除分支 ###
+## 删除分支 
 
 	git branch -D version1.0
 
-### 与远程版本库协作 ###
+## 与远程版本库协作
 
 比如说现在有一个远程版本库的Git 地址是https://github.com/exmaple/test.git，就可以使
 用如下的命令将代码下载到本地：
 
-	git clone https://github.com/exmaple/test.git
+	
+git clone https://github.com/exmaple/test.git
 之后你在这份代码的基础进行了一些修改和提交，那么怎样才能把本地修改的内容同步
 到远程版本库上呢？这就需要借助push 命令来完成了，用法如下所示：
 
