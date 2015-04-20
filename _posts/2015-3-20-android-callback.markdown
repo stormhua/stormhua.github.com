@@ -24,12 +24,34 @@ tags: [回调]
 
 ## 1.异步回调
 
+**从网上异步下载图片**
+
 {% highlight java %}
     //接口的回调方式
     public interface ImageCallBack {
         public void getImage(Drawable drawable);
     }
-}
+//class B
+ public void loadImage(final ImageCallBack imageCallBack) {
+        final Handler handler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                Drawable drawable= (Drawable) msg.obj;
+                imageCallBack.getImage(drawable);
+            }
+
+        };
+//相当于实现背景一、二、这里用的匿名内部类class A
+pdownLoadImage.loadImage(new DownLoadImage.ImageCallBack() {
+                @Override
+                public void getImage(Drawable drawable) {
+                    imageView.setImageDrawable(drawable);
+                }
+            });
+                }
 {% endhighlight %}
 
 ## 2.同步回调
+
+按钮的setOnClickListener();
