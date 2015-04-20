@@ -24,7 +24,7 @@ tags: [回调]
 
 ## 1.异步回调
 
-       //接口的回调方式
+   //接口的回调方式
     public interface ImageCallBack {
         public void getImage(Drawable drawable);
     }
