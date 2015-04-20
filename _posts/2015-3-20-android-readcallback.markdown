@@ -9,6 +9,7 @@ tags: [第一行代码]
 {% include codepiano/setup %}
 
 ## 第一行代码Git使用 ##
+
 ###  Windows 教程: ###
 
 1. 配置身份 
@@ -29,11 +30,15 @@ tags: [第一行代码]
 		-git commit -m "First commit"
 
 ----------
+
 ### 忽略文件 ###
+
 &nbsp;&nbsp;Git 提供了一种可配性很强的机制来允许用户将指定的文件或目录排除在版本控制之
 外，它会检查代码仓库的根目录下是否存在一个名为.gitignore 的文件，如果存在的话就去一
 行行读取这个文件中的内容，并把每一行指定的文件或目录排除在版本控制之外。注意.gitignore 中指定的文件或目录是可以使用“*”通配符的。
+
 ### 查看修改内容 ###
+
 查看文件修改情况的方法非常简单，只需要使用status 命令就可以了，在项目的根目录
 下输入如下命令：
 
@@ -47,7 +52,9 @@ tags: [第一行代码]
 改内容，可以使用如下命令：
 
 	git diff src/com/example/providertest/MainActivity.java
+
 ### 撤销未提交的修改 ###
+
 	git checkout src/com/example/providertest/MainActivity.java
 
 当然不是，只不过对于已添加的文件我们应该先对其取消添加，然后才可以撤回提交。取消添加使用的是reset 命令，用法如下所示：
@@ -56,6 +63,7 @@ tags: [第一行代码]
 
 然后再运行一遍git status 命令，你就会发现MainActivity.java 这个文件重新变回了未添
 加状态，此时就可以使用checkout 命令来将修改的内容进行撤销了
+
 ### 查看提交记录 ###
 	git log
 
@@ -74,6 +82,7 @@ tags: [第一行代码]
 ### 查看分支 ###
 
 	git branch –a
+
 ### 创建分支 ###
 
 	git branch version1.0
@@ -82,10 +91,13 @@ tags: [第一行代码]
 
 	git checkout master
 	git merge version1.0
+
 ### 删除分支 ###
 
 	git branch -D version1.0
+
 ### 与远程版本库协作 ###
+
 比如说现在有一个远程版本库的Git 地址是https://github.com/exmaple/test.git，就可以使
 用如下的命令将代码下载到本地：
 
