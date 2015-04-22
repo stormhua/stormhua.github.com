@@ -2,7 +2,7 @@
 layout: post
 keywords: blog
 description: blog
-title: "activeandrodi的使用"
+title: "activeandroid的使用"
 categories: [开源库]
 tags: [activeandroid]
 ---
