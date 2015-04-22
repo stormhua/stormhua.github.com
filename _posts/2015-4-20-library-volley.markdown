@@ -12,6 +12,8 @@ tags: [volley]
 
 ## Volley提供的功能
 
+[jar包下载](http://download.csdn.net/detail/guanjianwoshinidaye/8620709)
+
 * 1.JSON，图像等的异步下载
 
 * 2.网络请求的排序（scheduling）
