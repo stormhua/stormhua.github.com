@@ -26,7 +26,7 @@ Person person = gson.fromJson(jsonData, Person.class);
 如果需要解析的是一段JSON 数组会稍微麻烦一点，我们需要借助TypeToken 将期望解
 析成的数据类型传入到fromJson()方法中，如下所示：
 
-```
+{% highlight java %}
 List<Person> people = gson.fromJson(jsonData, new TypeToken<List<Person>>()
 {}.getType());
-```
+{% endhighlight %}
