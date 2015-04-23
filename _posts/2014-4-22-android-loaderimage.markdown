@@ -13,7 +13,7 @@ tags: [oom]
 
 * 1.我们的摄像头拍摄照片的分辨率要比我们手机屏幕分辨率高
 
-* 2.每个应用程序都是有内存限制的、
+* 2.每个应用程序都是有内存限制的
 
 ### 查看每个应用程序最高可用内存
 
@@ -94,10 +94,68 @@ public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
 
 - 你能维持好数量和质量之间的平衡吗？有些时候，存储多个低像素的图片，而在后台去开线程加载高像素的图片会更加的有效。
 
-```java
-public static voidm main(String[] args){
-	System.out.println("llh")；
+下面是一个使用 LruCache 来缓存图片的例子：
+
+{% highlight java %}
+private LruCache<String, Bitmap> mMemoryCache;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	// 获取到可用内存的最大值，使用内存超出这个值会引起OutOfMemory异常。
+	// LruCache通过构造函数传入缓存值，以KB为单位。
+	int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+	// 使用最大可用内存值的1/8作为缓存的大小。
+	int cacheSize = maxMemory / 8;
+	mMemoryCache = new LruCache<String, Bitmap>(cacheSize) {
+		@Override
+		protected int sizeOf(String key, Bitmap bitmap) {
+			// 重写此方法来衡量每张图片的大小，默认返回图片数量。
+			return bitmap.getByteCount() / 1024;
+		}
+	};
 }
-```
+
+public void addBitmapToMemoryCache(String key, Bitmap bitmap) {
+	if (getBitmapFromMemCache(key) == null) {
+		mMemoryCache.put(key, bitmap);
+	}
+}
+
+public Bitmap getBitmapFromMemCache(String key) {
+	return mMemoryCache.get(key);
+}
+{% endhighlight %}
+
+&emsp;&emsp;在这个例子当中，使用了系统分配给应用程序的八分之一内存来作为缓存大小。在中高配置的手机当中，这大概会有4兆(32/8)的缓存空间。一个全屏幕的 GridView 使用4张 800x480分辨率的图片来填充，则大概会占用1.5兆的空间(800*480*4)。因此，这个缓存大小可以存储2.5页的图片。
+当向 ImageView 中加载一张图片时,首先会在 LruCache 的缓存中进行检查。如果找到了相应的键值，则会立刻更新ImageView ，否则开启一个后台线程来加载这张图片。
+
+{% highlight java %}
+public void loadBitmap(int resId, ImageView imageView) {
+	final String imageKey = String.valueOf(resId);
+	final Bitmap bitmap = getBitmapFromMemCache(imageKey);
+	if (bitmap != null) {
+		imageView.setImageBitmap(bitmap);
+	} else {
+		imageView.setImageResource(R.drawable.image_placeholder);
+		BitmapWorkerTask task = new BitmapWorkerTask(imageView);
+		task.execute(resId);
+	}
+}
+{% endhighlight %}
+
+BitmapWorkerTask 还要把新加载的图片的键值对放到缓存中。
+
+{% highlight java %}
+class BitmapWorkerTask extends AsyncTask<Integer, Void, Bitmap> {
+	// 在后台加载图片。
+	@Override
+	protected Bitmap doInBackground(Integer... params) {
+		final Bitmap bitmap = decodeSampledBitmapFromResource(
+				getResources(), params[0], 100, 100);
+		addBitmapToMemoryCache(String.valueOf(params[0]), bitmap);
+		return bitmap;
+	}
+}
+{% endhighlight %}
 
 [转载自：](http://blog.csdn.net/guolin_blog/article/details/9316683)
