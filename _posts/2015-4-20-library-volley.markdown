@@ -25,3 +25,34 @@ tags: [volley]
 * 5.多级别取消请求
 
 * 6.和Activity生命周期的联动（Activity结束时同时取消所有网络请求）
+
+## StringRequest解析
+
+{% highlight java %}
+StringRequest stringRequest = new StringRequest(Method.POST, url,
+				new Response.Listener() {
+					@Override
+					public void onResponse(Object arg0) {
+						// TODO Auto-generated method stub
+						Log.d(TAG, arg0.toString());
+						judgmentLoginResult(context, arg0.toString());
+					}
+				}, new Response.ErrorListener() {
+					@Override
+					public void onErrorResponse(VolleyError arg0) {
+						// TODO Auto-generated method stub
+					}
+				}) {
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError {
+				// TODO Auto-generated method stub
+				Map<String, String> map = new HashMap<String, String>();
+				map.put("pn", userTel);
+				map.put("pw", password);
+				return map;
+			}
+
+		};
+		queue.add(stringRequest);
+		queue.start();
+{% endhighlight %}
