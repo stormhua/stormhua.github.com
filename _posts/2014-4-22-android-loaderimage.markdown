@@ -94,4 +94,10 @@ public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
 
 - 你能维持好数量和质量之间的平衡吗？有些时候，存储多个低像素的图片，而在后台去开线程加载高像素的图片会更加的有效。
 
+```java
+public static voidm main(String[] args){
+	System.out.println("llh")；
+}
+```
+
 [转载自：](http://blog.csdn.net/guolin_blog/article/details/9316683)
