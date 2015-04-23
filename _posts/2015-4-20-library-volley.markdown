@@ -29,6 +29,7 @@ tags: [volley]
 ## StringRequest解析
 
 {% highlight java %}
+RequestQueue queue = Volley.newRequestQueue(context);
 StringRequest stringRequest = new StringRequest(Method.POST, url,
 				new Response.Listener() {
 					@Override
@@ -55,4 +56,48 @@ StringRequest stringRequest = new StringRequest(Method.POST, url,
 		};
 		queue.add(stringRequest);
 		queue.start();
+{% endhighlight %}
+
+## JasonObject解析
+
+{% highlight java %}
+	RequestQueue queue = Volley
+						.newRequestQueue(splashactivity.this);
+				String url = "http://m.weather.com.cn/data/101010100.html";
+				JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+						Method.POST, url, null,
+						new Response.Listener<JSONObject>() {
+							@Override
+							public void onResponse(JSONObject response) {
+								Log.d("TAG", response.toString());
+
+							}
+						}, new Response.ErrorListener() {
+							@Override
+							public void onErrorResponse(VolleyError error) {
+								Log.e("TAG", error.getMessage(), error);
+							}
+
+						});
+				queue.add(jsonObjectRequest);
+				queue.start();
+{% endhighlight %}
+
+
+----------
+
+## 使用Volley加载网络图片
+[ Android Volley完全解析(二)，使用Volley加载网络图片](http://blog.csdn.net/guolin_blog/article/details/17482165)
+
+## 设置网络超时
+
+覆写request的方法
+
+{% highlight java %}
+					@Override
+					public RetryPolicy getRetryPolicy() {
+						// TODO Auto-generated method stub
+						RetryPolicy retryPolicy = new DefaultRetryPolicy(Contast.SOCKET_TIMEOUT, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);  
+						return retryPolicy;
+					}
 {% endhighlight %}
