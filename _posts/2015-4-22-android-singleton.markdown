@@ -28,6 +28,7 @@ return singleton
 }
 {% endhighlight %}
 
+
 * 2.懒汉式
 
 ｛% highlight java %｝
@@ -50,6 +51,7 @@ public class Singleton {
 }
 {% endhighlight %}
 
+
 ## 问题
 上面的这个程序存在比较严重的问题，因为是全局性的实例，所以，在多线程情况下，所有的全局共享的东西都会变得非常的危险，这个也一样，在多线程情况下，如果多个线程同时调用getInstance()的话，那么，可能会有多个进程同时通过 (singleton== null)的条件检查，于是，多个实例就创建出来，并且很可能造成内存泄露问题。嗯，熟悉多线程的你一定会说——“我们需要线程互斥或同步”。
 
@@ -69,6 +71,7 @@ public class Singleton{
 	}
 }
 {% endhighlight %}
+
 注意，创建对象的动作只有一次，后面的动作全是读取那个成员变量，这些读取的动作不需要线程同步啊。这样的作法感觉非常极端啊，为了一个初始化的创建动作，居然让我们达上了所有的读操作，严重影响后续的性能啊!
 
 主要在于singleton = new Singleton()这句，这并非是一个原子操作，事实上在 JVM 中这句话大概做了下面 3 件事情。
@@ -97,6 +100,7 @@ public class Singleton
     }
 }
 {% endhighlight %}
+
 使用 volatile 有两个功用：
 
 1）这个变量不会在多个线程中存在复本，直接从内存读取。
