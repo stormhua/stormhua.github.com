@@ -31,7 +31,7 @@ return singleton
 
 * 2.懒汉式
 
-｛% highlight java %｝
+{% highlight java %}
 // 这种方式在需要使用的时候才实例化
 public class Singleton {
     private static Singleton singleton;
@@ -82,6 +82,7 @@ public class Singleton{
 但是在 JVM 的即时编译器中存在指令重排序的优化。也就是说上面的第二步和第三步的顺序是不能保证的，最终的执行顺序可能是 1-2-3 也可能是 1-3-2。如果是后者，则在 3 执行完毕、2 未执行之前，被线程二抢占了，这时 instance 已经是非 null 了（但却没有初始化），所以线程二会直接返回 instance，然后使用，然后顺理成章地报错。
 
 对此，我们只需要把singleton声明成 volatile 就可以了。下面是1.4版：
+
 {% highlight java %}
 // version 1.4
 public class Singleton
