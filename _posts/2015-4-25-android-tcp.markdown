@@ -9,7 +9,7 @@ tags: [tcp ip]
 {% include codepiano/setup %}
 
 
-##  android 网络编程--socket tcp/ip udp http之间的关系
+##  android 网络编程->socket tcp/ip udp http之间的关系
 
 ### 区别
 
@@ -28,6 +28,14 @@ tags: [tcp ip]
 ### 理解
 
 <img src="/image/tcp.png"/>
+
+Tcp/ip通信协议是一种可靠的网络协议，它在通信两端各建立一个Socket，从而在通信的两端形成网络虚拟链路。一旦建立了虚拟的网路链路，两端的程序就可以通过虚拟链路来进行通信，Java对基于TCP协议的网络通信提供了良好的封装，Java使用Socket对象来代表两端的通信接口，并通过Socket产生I/O流来进行网络通信。
+
+- IP只保证计算机能接收和发送分组数据。
+
+- TCP可以帮助IP协议提供可靠并且无差错的通信服务（端对端协议）
+
+TCP协议负责收集这谢信息包，并将按适当的次序放好传送，在接收端接到后在将其正确的还原，TCP保证了数据包在传送中准确无误，TCP协议使用重发机制
 
 
 
