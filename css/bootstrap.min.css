@@ -489,7 +489,11 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .navbar .container{width:auto;}
 .nav-collapse.collapse{height:auto;overflow:visible;}
 <<<<<<< HEAD
+<<<<<<< HEAD
 .navbar .brand{float:left;display:block;padding:10px 20px 10px;margin-left:-20px;font-size:20px;font-weight:200;color:#777777;text-shadow: 0 0px 0 #ffffff;}.navbar .brand:hover,.navbar .brand:focus{text-decoration:none;}
+=======
+.navbar .brand{float:left;display:block;padding:10px 20px 10px;margin-left:-20px;font-size:20px;font-weight:200;color:#777777;text-shadow:0 1px 0 #ffffff;}.navbar .brand:hover,.navbar .brand:focus{text-decoration:none;}
+>>>>>>> parent of d0b7940... change css
 =======
 .navbar .brand{float:left;display:block;padding:10px 20px 10px;margin-left:-20px;font-size:20px;font-weight:200;color:#777777;text-shadow:0 1px 0 #ffffff;}.navbar .brand:hover,.navbar .brand:focus{text-decoration:none;}
 >>>>>>> parent of d0b7940... change css
@@ -518,7 +522,11 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .navbar .nav.pull-right{float:right;margin-right:0;}
 .navbar .nav>li{float:left;}
 <<<<<<< HEAD
+<<<<<<< HEAD
 .navbar .nav>li>a{float:none;padding:10px 15px 10px;color:#777777;text-decoration:none;text-shadow: 0 0px 0 #ffffff;}
+=======
+.navbar .nav>li>a{float:none;padding:10px 15px 10px;color:#777777;text-decoration:none;text-shadow:0 1px 0 #ffffff;}
+>>>>>>> parent of d0b7940... change css
 =======
 .navbar .nav>li>a{float:none;padding:10px 15px 10px;color:#777777;text-decoration:none;text-shadow:0 1px 0 #ffffff;}
 >>>>>>> parent of d0b7940... change css
