@@ -13,7 +13,7 @@
 .navbar>.navbar-inner {
     padding-left: 0px;
     BACKGROUND: url(http://eput.com/images/headerbg.png) repeat-x ;
-     BACKGROUND: url(http://eput.com/images/headerbg.png) repeat-y ;
+     BACKGROUND: url(http://eput.com/images/headerbg.png) repeat ;
     BORDER:NONE;
 }
 .navbar-inner {
