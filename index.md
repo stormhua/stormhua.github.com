@@ -6,7 +6,7 @@ description: Android技术分享者，开源爱好者
 ---
 {% include codepiano/setup %}
 
-##EOE里的博客
+##<div style="float:left;">EOE里的博客</div>
 * 1.[多点触摸和图形的移动](http://www.eoeandroid.com/thread-550007-1-1.html)
 
 * 2.[popwindow,模仿的qq退出功能](http://www.eoeandroid.com/thread-549820-1-1.html)
