@@ -49,4 +49,10 @@
 .tag_box a span {
   vertical-align: super;
   font-size: 0.8em; }
+.navbar-inner row-fluid{
 
+	background:#1A1A1A;
+}
+.row-fluid post-full typo{
+	background:#1A1A1A;
+}
