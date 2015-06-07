@@ -12,7 +12,7 @@
 @charset "utf-8";
 .navbar>.navbar-inner {
     padding-left: 0px;
-    BACKGROUND: #1A1A1A;
+    BACKGROUND: url(http://eput.com/images/headerbg.png) repeat-x;
     BORDER:NONE;
 }
 .navbar-inner {
