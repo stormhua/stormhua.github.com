@@ -10,12 +10,9 @@
 ============================================================================= */
 
 @charset "utf-8";
-.navbar-inner row-fluid{
-
-	background:#1A1A1A;
-}
-.row-fluid post-full typo{
-	background:#1A1A1A;
+.navbar>.navbar-inner {
+    padding-left: 0px;
+    BACKGROUND: #1A1A1A;
 }
 /* a标签样式 */
 a {
