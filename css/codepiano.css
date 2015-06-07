@@ -13,6 +13,7 @@
 .navbar>.navbar-inner {
     padding-left: 0px;
     BACKGROUND: #1A1A1A;
+    BORDER:NONE;
 }
 /* a标签样式 */
 a {
