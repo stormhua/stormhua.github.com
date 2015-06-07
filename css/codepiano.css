@@ -15,6 +15,9 @@
     BACKGROUND: #1A1A1A;
     BORDER:NONE;
 }
+.navbar-inner {
+     BORDER:NONE;
+}
 /* a标签样式 */
 a {
   text-decoration: none;
