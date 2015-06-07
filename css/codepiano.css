@@ -18,6 +18,10 @@
 .navbar-inner {
      BORDER:NONE;
 }
+.navbar .brand {
+    
+        text-shadow: 0 0px 0 #ffffff;
+}
 /* a标签样式 */
 a {
   text-decoration: none;
