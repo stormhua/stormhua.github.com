@@ -45,4 +45,6 @@ tags: [handler]
 	 protected List<Map<String, Object>> doInBackground(String... params) {}
 {% endhighlight %}
 
+<image src="image/handler.jpg"/>
+
 &emsp;&emsp;*异步执行*
