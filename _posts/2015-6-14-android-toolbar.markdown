@@ -15,6 +15,10 @@ tags: [toolbar、5.0]
 
 ### 基本步骤
 
+* 1.为了能在你的Activity中使用Toolbar，你必须在工程里修改styles.xml文件里的主题风格，系统默认如下
+
+
+
 
 
 
