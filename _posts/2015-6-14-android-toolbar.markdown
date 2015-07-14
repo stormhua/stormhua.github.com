@@ -47,7 +47,7 @@ tags: [toolbar、5.0]
 compileSdkVersion 22
 buildToolsVersion “22.0.1”
 compile ‘com.android.support:appcompat-v7:22.1.1’
-{% highlight %}
+{% endhighlight %}
 
 * 3.效果如下
 <img src="/image/toolbar"/>
