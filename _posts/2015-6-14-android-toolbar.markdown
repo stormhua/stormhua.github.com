@@ -50,7 +50,7 @@ compile ‘com.android.support:appcompat-v7:22.1.1’
 {% endhighlight %}
 
 * 3.效果如下
-<img src="/image/toolbar"/>
+<img src="/image/toolbar.png"/>
 
 
 
