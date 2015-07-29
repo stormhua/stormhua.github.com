@@ -20,7 +20,7 @@ tags: [Ubuntu、win7]
 * 2.打开esaybcd 添加新条目 NeoGrub 安装 配置
 
 * 3.
-       {% javahighlight %} 
+       {% highlight java %} 
             title Install Ubuntu
             root (hd0,0)
             kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-15.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
