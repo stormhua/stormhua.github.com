@@ -24,7 +24,7 @@ tags: [Ubuntu、win7]
 title Install Ubuntu
 root (hd0,0)
 kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-15.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
-            initrd (hd0,0)/initrd.lz
+initrd (hd0,0)/initrd.lz
 {% endhighlight %}
 
 **注意**
