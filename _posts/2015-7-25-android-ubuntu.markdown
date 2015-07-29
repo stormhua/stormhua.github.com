@@ -15,15 +15,15 @@ tags: [Ubuntu、win7]
 
 ### 步骤
 
-* 1.准备工作-> esaybcd-> ubuntu镜像-> 100G空闲空间(用于ubuntu的安装.根据自己情况而定)
+* 1.准备工作--> esaybcd--> ubuntu镜像--> 100G空闲空间(用于ubuntu的安装.根据自己情况而定)
 
 * 2.打开esaybcd 添加新条目 NeoGrub 安装 配置
 
 * 3.
-       {% highlight java %} 
-            title Install Ubuntu
-            root (hd0,0)
-            kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-15.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
+{% highlight java %} 
+title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz boot=casper iso-scan/filename=/ubuntu-15.04-desktop-i386.iso ro quiet splash locale=zh_CN.UTF-8
             initrd (hd0,0)/initrd.lz
 {% endhighlight %}
 
