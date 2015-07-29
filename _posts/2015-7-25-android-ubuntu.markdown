@@ -17,7 +17,7 @@ tags: [Ubuntu、win7]
 
 * 1.准备工作 esaybcd  ubuntu镜像 100G空闲空间(用于ubuntu的安装.根据自己情况而定)
 
-* 2.打开esaybcd ---->添加新条目---->NeoGrub---->安装---->配置
+* 2.打开esaybcd 添加新条目 NeoGrub 安装 配置
 
 * 3.
         
